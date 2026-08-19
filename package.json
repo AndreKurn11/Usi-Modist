@@ -10,7 +10,8 @@
     "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "jest",
-    "build:css": "tailwindcss -i public/css/style.css -o public/css/output.css"
+    "build:css": "tailwindcss -i public/css/style.css -o public/css/output.css",
+    "watch:css": "tailwindcss -i public/css/style.css -o public/css/output.css --watch"
   },
   "dependencies": {
     "dotenv": "16.3.1",
