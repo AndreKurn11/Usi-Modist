@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ecoprint-pounding-daun-jati",
+    "name": "Kain Ecoprint Daun Jati – Pounding",
+    "technique": "Pounding",
+    "description": "Kain katun premium dengan motif daun jati alami yang dihasilkan melalui teknik pounding. Setiap helai kain menampilkan jejak nyata daun jati dengan urat dan teksturnya yang khas, menciptakan pola organik yang tak dapat direplikasi. Proses mordanting menggunakan tawas alami memastikan warna tanah yang hangat dan tahan lama. Cocok dijadikan bahan busana kasual, blus, atau aksesori fashion bernuansa alam.",
+    "shortDescription": "Motif daun jati alami nan earthy dengan teknik pounding, unik dan tidak ada yang sama.",
+    "material": "Katun 100% primisima",
+    "plants": ["Daun Jati", "Daun Mangga", "Daun Pepaya"],
+    "image": "/images/products/ecoprint-pounding-daun-jati.jpg",
+    "process": "Kain direndam dalam larutan mordant tawas selama 24 jam, lalu dikeringkan. Daun jati segar dipilih dan ditata langsung di atas permukaan kain. Selembar plastik diletakkan di atasnya sebagai pelindung, kemudian setiap daun dipukul merata menggunakan palu kayu hingga pigmen alami berpindah ke kain. Kain diangin-anginkan selama 48 jam agar warna mengunci sempurna, lalu dicuci dengan air bersih tanpa detergen.",
+    "characteristics": "Motif organik unik, warna earthy tone cokelat-hijau kekuningan, tekstur halus, setiap lembar berbeda"
+  },
+  {
+    "id": "ecoprint-pounding-daun-jarak",
+    "name": "Kain Ecoprint Daun Jarak – Pounding",
+    "technique": "Pounding",
+    "description": "Kain sutra ATBM dengan cetakan daun jarak berpola menjari yang memukau. Teknik pounding menghasilkan guratan detail tulang daun yang presisi dan natural, menghadirkan karakter motif yang kuat namun tetap elegan. Pigmen dari daun jarak menghasilkan gradasi warna hijau tua hingga kuning kecokelatan yang memesona. Sangat ideal untuk busana formal semi-kasual, syal, atau pelengkap busana wanita.",
+    "shortDescription": "Motif daun jarak berpola menjari dengan gradasi hijau alami dari teknik pounding.",
+    "material": "Sutra ATBM (Alat Tenun Bukan Mesin)",
+    "plants": ["Daun Jarak", "Daun Ketapang", "Bunga Marigold"],
+    "image": "/images/products/ecoprint-pounding-daun-jarak.jpg",
+    "process": "Sutra ATBM dicelup mordant tawas 10% selama 12 jam pada suhu ruang. Daun jarak muda dipilih untuk kandungan klorofil optimal. Daun ditata berlapis di atas kain sutra, ditutup kain pelindung, lalu dipukul perlahan dan merata menggunakan palu karet agar serat sutra tidak rusak. Setelah proses pounding, kain digulung dan dibiarkan 72 jam sebelum dicuci dengan sabun netral dan dikeringkan di tempat teduh.",
+    "characteristics": "Detail urat daun tinggi, warna hijau-kuning alami, bahan sutra halus berkilau, motif simetris"
+  },
+  {
+    "id": "ecoprint-steam-daun-eucalyptus",
+    "name": "Kain Ecoprint Daun Eucalyptus – Steam",
+    "technique": "Steam",
+    "description": "Kain linen berkualitas tinggi dengan motif daun eucalyptus yang dihasilkan melalui teknik steam (pengukusan). Warna karat dan oranye tembaga khas eucalyptus meresap dalam hingga serat kain, menghasilkan motif yang tajam dan detail. Aroma terapi ringan eucalyptus masih dapat tercium samar pada kain segar. Cocok untuk gaun santai, outer layer, atau busana resort yang mengedepankan keanggunan alami.",
+    "shortDescription": "Motif eucalyptus oranye-karat nan intens dari proses steam, aroma alam yang melekat.",
+    "material": "Linen 100% premium",
+    "plants": ["Daun Eucalyptus", "Daun Rosemary", "Daun Cemara"],
+    "image": "/images/products/ecoprint-steam-daun-eucalyptus.jpg",
+    "process": "Kain linen di-mordant dengan larutan tawas dan krim tartar selama 24 jam. Daun eucalyptus segar disusun rapat di atas kain lembab, lalu kain digulung rapat bersama bambu sebagai poros. Gulungan diikat kuat dengan tali rami dan dikukus dalam panci besar selama 2–3 jam dengan api sedang. Setelah dingin, kain dibuka perlahan dan dibiarkan teroksidasi di udara terbuka selama 24 jam sebelum dicuci.",
+    "characteristics": "Warna karat-oranye intens, motif detail tinggi, aroma natural, tahan cuci berulang"
+  },
+  {
+    "id": "ecoprint-steam-daun-pakis",
+    "name": "Kain Ecoprint Daun Pakis – Steam",
+    "technique": "Steam",
+    "description": "Kain katun voal ringan dengan motif daun pakis hutan yang kompleks dan artistik, dihasilkan menggunakan teknik steam. Pola pakis yang rumit dan berulang menciptakan estetika botanis yang kaya, layaknya karya seni di atas kain. Perpaduan mordant besi menambahkan nuansa abu-biru kehijauan yang khas dan modern. Sangat sesuai untuk blus, kerudung, atau kain dekoratif bernuansa hutan tropis.",
+    "shortDescription": "Motif pakis hutan yang kompleks dengan nuansa abu-hijau artistik dari teknik steam.",
+    "material": "Katun Voal 100%",
+    "plants": ["Daun Pakis", "Daun Sirih Hutan", "Daun Pandan"],
+    "image": "/images/products/ecoprint-steam-daun-pakis.jpg",
+    "process": "Kain voal direndam dalam larutan mordant besi (FeSO4) 2% selama 1 jam untuk menghasilkan warna gelap. Daun pakis segar dipetik pagi hari dan langsung ditata di atas kain yang sedikit dibasahi. Kain digulung bersama pipa PVC sebagai poros, diikat dengan karet gelang, lalu dikukus selama 90 menit. Setelah matang, kain dibuka dan dibiarkan selama 48 jam sebelum dibilas dengan cuka encer untuk mengunci warna.",
+    "characteristics": "Pola botanis kompleks, warna abu-hijau tua, bahan ringan transparan, cocok untuk layering"
+  },
+  {
+    "id": "ecoprint-iron-blanket-daun-jati-merah",
+    "name": "Kain Ecoprint Daun Jati Merah – Iron Blanket",
+    "technique": "Iron Blanket",
+    "description": "Kain tenun tradisional dengan motif daun jati muda yang menghasilkan warna merah bata dramatis, melalui teknik iron blanket yang memadukan panas dan tekanan. Teknik ini menghasilkan ketajaman motif tertinggi di antara semua metode ecoprint, dengan detail venasi daun yang hampir sempurna. Warna merah bata khas tannin daun jati menjadi identitas kuat produk ini. Ideal untuk kain sarung, selendang, atau busana batik modern.",
+    "shortDescription": "Motif daun jati merah bata yang dramatis dengan ketajaman motif terbaik dari teknik iron blanket.",
+    "material": "Katun Tenun Tradisional ATBM",
+    "plants": ["Daun Jati Muda", "Daun Alpukat", "Kulit Kayu Soga"],
+    "image": "/images/products/ecoprint-iron-blanket-daun-jati-merah.jpg",
+    "process": "Kain tenun dicelup mordant campuran tawas dan baking soda 8% selama 24 jam. Daun jati muda yang kaya tannin disusun presisi di atas kain, lalu kain dilipat menjadi beberapa lapisan dengan bantalan logam (iron blanket) di antara lipatan. Seluruh susunan dikempa menggunakan alat press dan dipanaskan dalam oven industri pada suhu 80°C selama 45 menit. Setelah didinginkan, kain dibuka dan warna dikunci dengan rendaman air garam.",
+    "characteristics": "Warna merah bata kuat, detail venasi presisi, tekstur kokoh, warna tahan lama"
+  },
+  {
+    "id": "ecoprint-iron-blanket-bunga-cosmos",
+    "name": "Kain Ecoprint Bunga Cosmos – Iron Blanket",
+    "technique": "Iron Blanket",
+    "description": "Kain sutra halus dengan cetakan bunga cosmos berwarna kuning-oranye cerah yang memesona, hasil dari teknik iron blanket beresolusi tinggi. Kelopak bunga cosmos terekam sempurna beserta benang sari dan tekstur petalnya, menciptakan motif floral yang hidup dan penuh warna. Warna alami flavonoid bunga cosmos menghasilkan gradasi kuning matahari hingga oranye senja yang menawan. Pilihan sempurna untuk gaun malam, blus elegan, atau busana pesta bernuansa bohemian.",
+    "shortDescription": "Motif bunga cosmos kuning-oranye cerah nan hidup dengan detail kelopak presisi dari iron blanket.",
+    "material": "Sutra Crepe de Chine",
+    "plants": ["Bunga Cosmos", "Bunga Tagetes", "Daun Mint", "Kelopak Mawar"],
+    "image": "/images/products/ecoprint-iron-blanket-bunga-cosmos.jpg",
+    "process": "Sutra crepe direndam mordant tawas 12% dengan sedikit cream of tartar untuk kecemerlangan warna, selama 12 jam di lemari es agar serat tidak rusak. Bunga cosmos segar dipetik saat mekar penuh dan segera ditata di atas kain tanpa menunda agar pigmen tidak oksidasi. Kain dilipat berlapis dengan lembaran aluminium foil sebagai iron blanket, diklem rapat, dan dipress pada suhu 75°C selama 30 menit. Setelah dingin total, kain direndam dalam larutan cuka 5% selama 10 menit untuk mempertahankan kecemerlangan.",
+    "characteristics": "Warna kuning-oranye cerah, detail floral presisi tinggi, bahan sutra mewah, cocok busana formal"
+  },
+  {
+    "id": "ecoprint-pounding-campuran-dedaunan",
+    "name": "Kain Ecoprint Campuran Dedaunan – Pounding",
+    "technique": "Pounding",
+    "description": "Kain katun organik dengan komposisi motif campuran berbagai dedaunan tropis yang ditata secara artistik menggunakan teknik pounding. Perpaduan daun pandan, sirih, dan jambu biji menciptakan harmoni warna hijau, kuning, dan cokelat natural yang kaya. Setiap kain merupakan karya unik karena susunan daun yang tak pernah sama dua kali. Cocok untuk berbagai keperluan fashion maupun dekorasi rumah seperti taplak meja atau sarung bantal.",
+    "shortDescription": "Komposisi motif dedaunan tropis campuran yang kaya warna dan unik dari teknik pounding.",
+    "material": "Katun Organik Bersertifikasi",
+    "plants": ["Daun Pandan", "Daun Sirih", "Daun Jambu Biji", "Daun Ketela"],
+    "image": "/images/products/ecoprint-pounding-campuran-dedaunan.jpg",
+    "process": "Kain katun organik dimordant dengan tawas dan ekstrak kayu manis selama 24 jam untuk nuansa hangat. Berbagai daun tropis dipilih, dibersihkan, dan ditata secara komposisi artistik di atas kain. Setiap daun dipukul secara bertahap dengan palu kayu, dimulai dari daun terbesar hingga terkecil, untuk mengontrol ketebalan pigmen. Setelah semua daun selesai dipukul, kain diangin-anginkan 72 jam lalu dibilas dengan air mengalir dan dikeringkan di bawah naungan.",
+    "characteristics": "Komposisi motif kaya, palet warna hijau-kuning-cokelat natural, tekstur organik, setiap lembar unik"
+  }
+]

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<%- include('../partials/head', { title: title }) %>
+<body class="bg-stone-50 text-stone-900 font-sans">
+  <%- include('../partials/header') %>
+  <main>
+
+    <!-- ── Hero / Banner ─────────────────────────────────────────── -->
+    <!-- Req 9.1, 9.2 -->
+    <section class="bg-stone-900 text-stone-100 py-16 lg:py-24" aria-labelledby="about-hero-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="text-xs font-semibold uppercase tracking-widest text-stone-400">Tentang Kami</span>
+        <h1 id="about-hero-heading" class="font-serif text-4xl lg:text-6xl font-bold text-stone-100 mt-4 leading-tight max-w-3xl">
+          Cerita di Balik Setiap Helai Karya
+        </h1>
+        <p class="mt-6 text-base lg:text-lg text-stone-300 leading-relaxed max-w-2xl">
+          Usimodist lahir dari keyakinan bahwa mode dan alam bisa berjalan beriringan — menghasilkan keindahan tanpa merusak bumi.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Founding Story & Mission ──────────────────────────────── -->
+    <!-- Req 9.3 -->
+    <section class="bg-stone-50 py-16 lg:py-20" data-reveal aria-labelledby="founding-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-widest text-stone-500">Asal Usul</span>
+            <h2 id="founding-heading" class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 mt-3 leading-snug">
+              Dari Kebun ke Kain
+            </h2>
+            <div class="mt-6 flex flex-col gap-4 text-sm lg:text-base text-stone-600 leading-relaxed">
+              <p>
+                Usimodist didirikan oleh pengrajin tekstil lokal yang terinspirasi dari kekayaan flora Nusantara.
+                Nama "Usimodist" merangkum visi kami: menggunakan alam (<em>usi</em>) sebagai medium ekspresi artistik
+                (<em>modist</em>) yang berkelanjutan.
+              </p>
+              <p>
+                Misi kami sederhana namun mendalam — menciptakan busana dan tekstil yang jujur terhadap bumi,
+                memuliakan tanaman lokal, dan memberdayakan pengrajin tradisional Indonesia.
+              </p>
+            </div>
+          </div>
+          <div class="min-h-[320px] lg:min-h-[440px] overflow-hidden rounded">
+            <img
+              src="/images/about-founding.jpg"
+              alt="Pengrajin Usimodist sedang mengerjakan kain ecoprint dengan dedaunan alami"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Eco-Print Process & Environmental Benefits ─────────────── -->
+    <!-- Req 9.4 -->
+    <section class="bg-stone-100 py-16 lg:py-20" data-reveal aria-labelledby="process-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+          <span class="text-xs font-semibold uppercase tracking-widest text-stone-500">Proses Kami</span>
+          <h2 id="process-heading" class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 mt-3 leading-snug">
+            Proses Ecoprint: Alam Berbicara
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div class="flex flex-col gap-5 text-sm lg:text-base text-stone-600 leading-relaxed">
+            <p>
+              Ecoprint adalah metode pewarnaan tekstil yang menggunakan pigmen alami langsung dari daun, bunga,
+              dan material organik lainnya. Tidak ada pewarna sintetis, tidak ada bahan kimia berbahaya —
+              hanya keindahan murni yang berpindah dari alam ke kain.
+            </p>
+            <p>
+              Berbeda dengan pewarnaan tekstil konvensional yang menghasilkan limbah cair kimia berbahaya,
+              proses ecoprint kami <strong class="text-stone-800">menggunakan mordant alami (tawas) yang aman terurai secara biologis</strong>.
+              Ini berarti air limbah proses kami tidak meracuni sungai atau tanah.
+            </p>
+            <p>
+              Setiap lembar kain melewati tahapan mordanting, penataan daun, fiksasi (pounding / steam / iron blanket),
+              pengeringan alami, dan pembilasan dengan air bersih tanpa detergen sintetis.
+              Hasilnya adalah tekstil yang ramah lingkungan sekaligus bernilai estetika tinggi.
+            </p>
+            <!-- Environmental benefit explicitly stated (Req 9.4) -->
+            <div class="border-l-4 border-stone-400 pl-4 text-stone-700 italic">
+              Manfaat lingkungan konkret: proses ecoprint kami mengurangi penggunaan air sebesar 70% dibandingkan
+              pewarnaan konvensional dan tidak menghasilkan limbah cair kimia yang mencemari perairan.
+            </div>
+          </div>
+          <div class="flex flex-col gap-5">
+            <img
+              src="/images/about-process.jpg"
+              alt="Proses pembuatan ecoprint: daun ditata di atas kain yang telah dimordanting"
+              class="w-full object-cover rounded"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Teknik Ecoprint: Pounding, Steam, Iron Blanket ─────────── -->
+    <!-- Req 9.5 -->
+    <section class="bg-stone-50 py-16 lg:py-20" data-reveal aria-labelledby="techniques-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-2xl mb-10">
+          <span class="text-xs font-semibold uppercase tracking-widest text-stone-500">Tiga Cara Kami</span>
+          <h2 id="techniques-heading" class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 mt-3 leading-snug">
+            Teknik Ecoprint Usimodist
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <!-- Pounding -->
+          <article class="flex flex-col gap-4">
+            <div class="h-48 overflow-hidden rounded">
+              <img
+                src="/images/technique-pounding.jpg"
+                alt="Teknik pounding: daun dipukul langsung ke permukaan kain"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-serif text-xl font-semibold text-stone-900">Pounding</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              Teknik tertua dan paling langsung — daun segar ditata di atas kain mordanting, lalu dipukul merata
+              menggunakan palu. Pigmen alami berpindah langsung ke serat kain, meninggalkan jejak nyata
+              termasuk detail urat dan tekstur daun. Menghasilkan motif organik yang kasar-alami dan penuh karakter.
+            </p>
+          </article>
+
+          <!-- Steam -->
+          <article class="flex flex-col gap-4">
+            <div class="h-48 overflow-hidden rounded">
+              <img
+                src="/images/technique-steam.jpg"
+                alt="Teknik steam: kain digulung bersama daun lalu dikukus dalam panci"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-serif text-xl font-semibold text-stone-900">Steam</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              Kain dan daun digulung bersama pipa, diikat rapat, lalu dikukus selama 2–3 jam. Panas uap membantu
+              pigmen meresap lebih dalam ke serat, menghasilkan warna yang lebih intens dan tahan lama.
+              Cocok untuk tanaman dengan kandungan tanin tinggi seperti eucalyptus dan pakis.
+            </p>
+          </article>
+
+          <!-- Iron Blanket -->
+          <article class="flex flex-col gap-4">
+            <div class="h-48 overflow-hidden rounded">
+              <img
+                src="/images/technique-iron-blanket.jpg"
+                alt="Teknik iron blanket: kain dilipat dengan bantalan logam lalu di-press dan dipanaskan"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="font-serif text-xl font-semibold text-stone-900">Iron Blanket</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+              Metode paling presisi: kain dilipat berlapis dengan lembaran logam (iron blanket) di antaranya,
+              lalu dikempa dan dipanaskan dalam oven. Tekanan dan panas seragam menghasilkan ketajaman motif
+              tertinggi dengan detail venasi daun yang hampir fotografi. Ideal untuk bunga dan daun berpigmen cerah.
+            </p>
+          </article>
+
+        </div>
+
+        <!-- Navigation link (Req 9.7) -->
+        <div class="mt-12 flex flex-wrap gap-4">
+          <a
+            href="/products"
+            class="inline-flex items-center justify-center px-6 py-3 min-h-[44px] text-sm font-semibold text-stone-50 bg-stone-800 hover:bg-stone-900 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+          >
+            Lihat Semua Produk
+          </a>
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center px-6 py-3 min-h-[44px] text-sm font-semibold text-stone-800 border border-stone-300 hover:bg-stone-100 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+          >
+            Hubungi Kami
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>

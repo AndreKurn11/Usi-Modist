@@ -1,0 +1,157 @@
+<%#
+  Partial: views/partials/header.ejs
+  Navbar: logo, desktop nav links, CTA button, hamburger menu
+  Requirements: 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 16.7, 17.1
+  - bg-stone-50 → HSL lightness ≈97% (≥95% ✓)
+  - text-stone-900 → HSL lightness ≈6% (≤15% ✓), contrast vs bg-stone-50 ≥4.5:1 ✓
+  - sticky top-0 z-50 border-b border-stone-200
+  - All touch targets: min-h-[44px] min-w-[44px] (Req 16.7) ✓
+  - Script tag lives in head.ejs (deferred) — not here
+%>
+<header class="bg-stone-50 sticky top-0 z-50 border-b border-stone-200">
+  <nav
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+    aria-label="Navigasi utama"
+  >
+    <div class="flex items-center justify-between h-16">
+
+      <!-- ── Logo & Brand Name (left) ──────────────────────── -->
+      <a
+        href="/"
+        class="flex items-center gap-2 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 rounded"
+        aria-label="Usimodist — Beranda"
+      >
+        <!-- Leaf icon (decorative) -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="w-7 h-7 text-stone-600"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path d="M17 8C8 10 5.9 16.17 3.82 19.6L5.71 21l1-1.23A4.49 4.49 0 0 0 8 20c4 0 4-2 8-2s4 2 8 2v-2c-4 0-4-2-8-2c-1.13 0-1.9.16-2.53.33C14.28 13.42 16 10.5 17 8z"/>
+        </svg>
+        <span class="font-serif text-xl font-bold tracking-tight text-stone-900">
+          Usimodist
+        </span>
+      </a>
+
+      <!-- ── Desktop Navigation Links (right, hidden on mobile <lg) ── -->
+      <div class="hidden lg:flex items-center gap-1">
+        <a
+          href="/"
+          class="px-3 py-2 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Beranda</a>
+        <a
+          href="/about"
+          class="px-3 py-2 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Tentang</a>
+        <a
+          href="/products"
+          class="px-3 py-2 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Produk</a>
+        <a
+          href="/gallery"
+          class="px-3 py-2 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Galeri</a>
+        <a
+          href="/contact"
+          class="px-3 py-2 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Kontak</a>
+
+        <!-- CTA Button: Hubungi Kami → /contact -->
+        <a
+          href="/contact"
+          class="ml-4 inline-flex items-center justify-center px-5 py-2 min-h-[44px] min-w-[44px] text-sm font-semibold text-stone-50 bg-stone-800 hover:bg-stone-900 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Hubungi Kami</a>
+      </div>
+
+      <!-- ── Hamburger Button (lg:hidden, visible only on <1024px) ── -->
+      <button
+        id="hamburger-btn"
+        type="button"
+        class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded text-stone-700 hover:text-stone-900 hover:bg-stone-100 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        aria-label="Buka menu navigasi"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <!-- Hamburger icon — 3 horizontal bars (shown when menu closed) -->
+        <svg
+          id="icon-hamburger"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-6 h-6"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <line x1="3" y1="6"  x2="21" y2="6"  />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+
+        <!-- X / Close icon (initially hidden, shown when menu is open) -->
+        <svg
+          id="icon-close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="w-6 h-6 hidden"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <line x1="18" y1="6"  x2="6"  y2="18" />
+          <line x1="6"  y1="6"  x2="18" y2="18" />
+        </svg>
+      </button>
+
+    </div><!-- /flex row -->
+
+    <!-- ── Mobile Menu (id="mobile-menu", hidden by default) ── -->
+    <div
+      id="mobile-menu"
+      class="hidden lg:hidden"
+      role="region"
+      aria-label="Menu navigasi mobile"
+    >
+      <div class="border-t border-stone-200 py-3 flex flex-col gap-1">
+        <a
+          href="/"
+          class="mobile-nav-link px-4 py-3 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Beranda</a>
+        <a
+          href="/about"
+          class="mobile-nav-link px-4 py-3 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Tentang</a>
+        <a
+          href="/products"
+          class="mobile-nav-link px-4 py-3 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Produk</a>
+        <a
+          href="/gallery"
+          class="mobile-nav-link px-4 py-3 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Galeri</a>
+        <a
+          href="/contact"
+          class="mobile-nav-link px-4 py-3 text-sm font-medium text-stone-700 hover:text-stone-900 hover:bg-stone-100 rounded transition-colors duration-150 min-h-[44px] flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Kontak</a>
+
+        <!-- CTA in mobile menu -->
+        <a
+          href="/contact"
+          class="mobile-nav-link mt-2 mx-4 inline-flex items-center justify-center px-4 py-3 min-h-[44px] min-w-[44px] text-sm font-semibold text-stone-50 bg-stone-800 hover:bg-stone-900 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+        >Hubungi Kami</a>
+      </div>
+    </div><!-- /mobile-menu -->
+
+  </nav>
+</header>

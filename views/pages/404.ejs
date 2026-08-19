@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<%- include('../partials/head', { title: title }) %>
+<body class="bg-stone-50 text-stone-900 font-sans">
+  <%- include('../partials/header') %>
+  <main>
+
+    <!-- ── 404 Page ───────────────────────────────────────────────── -->
+    <!-- Req 1.6, 8.3 -->
+    <section class="py-20 lg:py-32 flex items-center justify-center" aria-labelledby="notfound-heading">
+      <div class="max-w-lg mx-auto px-4 text-center flex flex-col gap-6">
+
+        <!-- 404 status (informative, in Bahasa Indonesia) -->
+        <p class="text-xs font-semibold uppercase tracking-widest text-stone-500">Halaman Tidak Ditemukan</p>
+
+        <h1 id="notfound-heading" class="font-serif text-7xl lg:text-9xl font-bold text-stone-200 leading-none select-none" aria-hidden="true">
+          404
+        </h1>
+
+        <h2 class="font-serif text-2xl lg:text-3xl font-bold text-stone-900 -mt-2">
+          Halaman Tidak Tersedia
+        </h2>
+
+        <p class="text-sm lg:text-base text-stone-600 leading-relaxed">
+          Maaf, halaman yang Anda cari tidak dapat ditemukan. Mungkin alamatnya berubah,
+          atau halaman tersebut sudah tidak tersedia. Coba kembali ke beranda dan telusuri dari sana.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 justify-center mt-2">
+          <a
+            href="/"
+            class="inline-flex items-center justify-center px-6 py-3 min-h-[44px] text-sm font-semibold text-stone-50 bg-stone-800 hover:bg-stone-900 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+          >
+            ← Kembali ke Beranda
+          </a>
+          <a
+            href="/products"
+            class="inline-flex items-center justify-center px-6 py-3 min-h-[44px] text-sm font-semibold text-stone-800 border border-stone-300 hover:bg-stone-100 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+          >
+            Lihat Produk
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>

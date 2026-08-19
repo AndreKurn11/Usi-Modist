@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<%- include('../partials/head', { title: title }) %>
+<body class="bg-stone-50 text-stone-900 font-sans">
+  <%- include('../partials/header') %>
+  <main>
+
+    <!-- ── Product Detail ────────────────────────────────────────── -->
+    <!-- Req 11.1–11.13 -->
+    <section class="py-10 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Breadcrumb -->
+        <nav class="mb-8 text-sm text-stone-500" aria-label="Breadcrumb">
+          <ol class="flex items-center gap-2">
+            <li><a href="/" class="hover:text-stone-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 rounded">Beranda</a></li>
+            <li aria-hidden="true" class="select-none">/</li>
+            <li><a href="/products" class="hover:text-stone-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 rounded">Produk</a></li>
+            <li aria-hidden="true" class="select-none">/</li>
+            <li class="text-stone-800 font-medium" aria-current="page"><%= product.name %></li>
+          </ol>
+        </nav>
+
+        <!-- Two-column layout: image left, details right (desktop ≥1024px) -->
+        <!-- Single column on mobile (Req 11.4, 11.13) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+
+          <!-- Product Image (Req 11.4): full-width mobile / min 50% desktop -->
+          <div class="w-full">
+            <img
+              src="<%= product.image %>"
+              alt="<%= product.name %>"
+              class="w-full object-cover rounded"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Product Details -->
+          <div class="flex flex-col gap-6">
+
+            <!-- Technique badge (Req 11.6) -->
+            <span class="text-xs font-semibold uppercase tracking-widest text-stone-500 bg-stone-100 px-3 py-1 rounded self-start">
+              <%= product.technique %>
+            </span>
+
+            <!-- Product Name H2 serif (Req 11.5) -->
+            <h1 class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 leading-tight">
+              <%= product.name %>
+            </h1>
+
+            <!-- Full Description (Req 11.7) -->
+            <div>
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-2">Deskripsi</h2>
+              <p class="text-sm lg:text-base text-stone-600 leading-relaxed">
+                <%= product.description %>
+              </p>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-stone-200" style="border-color: rgba(120,113,108,0.20);"></div>
+
+            <!-- Material (Req 11.8) -->
+            <div>
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-1">Material</h2>
+              <p class="text-sm text-stone-700"><%= product.material %></p>
+            </div>
+
+            <!-- Plants (Req 11.9) -->
+            <div>
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-2">Tanaman yang Digunakan</h2>
+              <ul class="flex flex-wrap gap-2">
+                <% product.plants.forEach(function(plant) { %>
+                <li class="text-xs bg-stone-100 text-stone-700 px-2 py-1 rounded border border-stone-200">
+                  <%= plant %>
+                </li>
+                <% }) %>
+              </ul>
+            </div>
+
+            <!-- Process (Req 11.10) -->
+            <div>
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-1">Proses Produksi</h2>
+              <p class="text-sm text-stone-600 leading-relaxed"><%= product.process %></p>
+            </div>
+
+            <!-- Characteristics (Req 11.11) -->
+            <div>
+              <h2 class="text-xs font-semibold uppercase tracking-widest text-stone-500 mb-1">Karakteristik</h2>
+              <p class="text-sm text-stone-600 leading-relaxed"><%= product.characteristics %></p>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-stone-200" style="border-color: rgba(120,113,108,0.20);"></div>
+
+            <!-- Contact CTA: WhatsApp + Contact page (Req 11.12) -->
+            <div class="flex flex-col sm:flex-row gap-3">
+              <a
+                href="https://wa.me/6281234567890?text=Halo%20Usimodist%2C%20saya%20tertarik%20dengan%20produk%20<%= encodeURIComponent(product.name) %>"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] text-sm font-semibold text-stone-50 bg-stone-800 hover:bg-stone-900 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+                aria-label="Tanya via WhatsApp (membuka tab baru)"
+              >
+                <!-- WhatsApp icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+                Tanya via WhatsApp
+              </a>
+              <a
+                href="/contact"
+                class="inline-flex items-center justify-center px-5 py-3 min-h-[44px] text-sm font-semibold text-stone-800 border border-stone-300 hover:bg-stone-100 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+              >
+                Halaman Kontak
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Back link -->
+        <div class="mt-12">
+          <a
+            href="/products"
+            class="inline-flex items-center gap-2 text-sm text-stone-600 hover:text-stone-900 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 rounded"
+          >
+            ← Kembali ke Semua Produk
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>

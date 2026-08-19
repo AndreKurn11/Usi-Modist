@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<%- include('../partials/head', { title: title }) %>
+<body class="bg-stone-50 text-stone-900 font-sans">
+  <%- include('../partials/header') %>
+  <main>
+
+    <!-- ── Page Header ───────────────────────────────────────────── -->
+    <section class="bg-stone-900 text-stone-100 py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="text-xs font-semibold uppercase tracking-widest text-stone-400">Koleksi Kami</span>
+        <h1 class="font-serif text-4xl lg:text-5xl font-bold text-stone-100 mt-3 leading-tight">
+          Produk Ecoprint
+        </h1>
+        <p class="mt-4 text-base text-stone-300 max-w-xl leading-relaxed">
+          Setiap karya adalah unik — dibuat dari alam, untuk mereka yang menghargai keindahan sejati.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Filter + Product Grid ──────────────────────────────────── -->
+    <!-- Req 10.1–10.9 -->
+    <section class="py-10 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Filter Buttons (Req 10.4) -->
+        <div class="flex flex-wrap gap-2 mb-10" role="group" aria-label="Filter teknik ecoprint">
+          <button
+            type="button"
+            class="filter-btn inline-flex items-center justify-center px-4 py-2 min-h-[44px] min-w-[44px] text-sm font-medium rounded border border-stone-300 bg-white text-stone-700 hover:bg-stone-100 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+            data-technique="Semua"
+            aria-pressed="true"
+          >
+            Semua
+          </button>
+          <button
+            type="button"
+            class="filter-btn inline-flex items-center justify-center px-4 py-2 min-h-[44px] min-w-[44px] text-sm font-medium rounded border border-stone-300 bg-white text-stone-700 hover:bg-stone-100 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+            data-technique="Pounding"
+            aria-pressed="false"
+          >
+            Pounding
+          </button>
+          <button
+            type="button"
+            class="filter-btn inline-flex items-center justify-center px-4 py-2 min-h-[44px] min-w-[44px] text-sm font-medium rounded border border-stone-300 bg-white text-stone-700 hover:bg-stone-100 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+            data-technique="Steam"
+            aria-pressed="false"
+          >
+            Steam
+          </button>
+          <button
+            type="button"
+            class="filter-btn inline-flex items-center justify-center px-4 py-2 min-h-[44px] min-w-[44px] text-sm font-medium rounded border border-stone-300 bg-white text-stone-700 hover:bg-stone-100 transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2"
+            data-technique="Iron Blanket"
+            aria-pressed="false"
+          >
+            Iron Blanket
+          </button>
+        </div>
+
+        <!-- Pass selectedTechnique to JS for pre-select -->
+        <script>
+          window.__selectedTechnique = "<%= selectedTechnique %>";
+        </script>
+
+        <!-- Product Grid (Req 10.3, 10.9) -->
+        <!-- grid-cols-1 mobile / md:grid-cols-2 tablet / lg:grid-cols-3 desktop -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-grid">
+
+          <% products.forEach(function(product) { %>
+          <!-- Product Card (Req 10.3) -->
+          <article
+            class="product-card bg-white border border-stone-200 rounded overflow-hidden flex flex-col"
+            data-technique="<%= product.technique %>"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="<%= product.image %>"
+                alt="<%= product.name %>"
+                class="w-full h-56 object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-5 flex flex-col gap-3 flex-1">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-semibold uppercase tracking-widest text-stone-500 bg-stone-100 px-2 py-1 rounded">
+                  <%= product.technique %>
+                </span>
+              </div>
+              <h2 class="font-serif text-lg font-semibold text-stone-900 leading-snug">
+                <%= product.name %>
+              </h2>
+              <p class="text-sm text-stone-600 leading-relaxed flex-1">
+                <%= product.shortDescription.length > 150 ? product.shortDescription.substring(0, 150) + '…' : product.shortDescription %>
+              </p>
+              <a
+                href="/products/<%= product.id %>"
+                class="inline-flex items-center text-sm font-semibold text-stone-800 hover:text-stone-600 underline underline-offset-4 transition-colors duration-150 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 rounded self-start"
+              >
+                Lihat Detail →
+              </a>
+            </div>
+          </article>
+          <% }) %>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>

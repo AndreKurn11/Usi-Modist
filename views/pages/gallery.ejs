@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<%- include('../partials/head', { title: title }) %>
+<body class="bg-stone-50 text-stone-900 font-sans">
+  <%- include('../partials/header') %>
+  <main>
+
+    <!-- ── Page Header ───────────────────────────────────────────── -->
+    <section class="bg-stone-900 text-stone-100 py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <span class="text-xs font-semibold uppercase tracking-widest text-stone-400">Visual</span>
+        <h1 class="font-serif text-4xl lg:text-5xl font-bold text-stone-100 mt-3 leading-tight">
+          Galeri
+        </h1>
+        <p class="mt-4 text-base text-stone-300 max-w-xl leading-relaxed">
+          Sebuah pandangan ke dalam dunia ecoprint Usimodist — dari dedaunan hingga karya jadi.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Gallery Grid ───────────────────────────────────────────── -->
+    <!-- Req 13.1–13.7 -->
+    <!-- min 2 columns desktop (≥768px), 1 column mobile (<768px) -->
+    <!-- CSS grid masonry-like with varied heights -->
+    <section class="py-10 lg:py-16" aria-label="Galeri foto Usimodist">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Gallery grid: 1 col mobile, 2 col sm, 3 col lg -->
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4">
+
+          <!-- Category: eco-print products -->
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-product-1.jpg"
+                alt="Kain ecoprint Usimodist dengan motif daun jati — produk unggulan"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Produk Ecoprint</figcaption>
+          </figure>
+
+          <!-- Category: leaves -->
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-leaves-1.jpg"
+                alt="Koleksi daun tropis segar yang digunakan dalam proses ecoprint Usimodist"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Dedaunan Alami</figcaption>
+          </figure>
+
+          <!-- Category: production process -->
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-process-1.jpg"
+                alt="Proses pounding: daun dipukul ke atas kain menggunakan palu kayu"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Proses Produksi</figcaption>
+          </figure>
+
+          <!-- Category: textile details -->
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-textile-1.jpg"
+                alt="Detail serat kain ecoprint Usimodist dengan motif daun yang presisi"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Detail Tekstil</figcaption>
+          </figure>
+
+          <!-- Category: nature -->
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-nature-1.jpg"
+                alt="Pemandangan alam hutan tropis — sumber inspirasi ecoprint Usimodist"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Alam</figcaption>
+          </figure>
+
+          <!-- Category: finished products -->
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-finished-1.jpg"
+                alt="Busana jadi ecoprint Usimodist — blus sutra dengan motif daun eucalyptus"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Produk Jadi</figcaption>
+          </figure>
+
+          <!-- Additional images for visual richness -->
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-product-2.jpg"
+                alt="Kain ecoprint steam dengan motif daun pakis berwarna hijau tua"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Produk Ecoprint</figcaption>
+          </figure>
+
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-process-2.jpg"
+                alt="Proses steam: gulungan kain berisi daun sedang dikukus dalam panci besar"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Proses Steam</figcaption>
+          </figure>
+
+          <figure class="break-inside-avoid group cursor-pointer">
+            <div class="overflow-hidden rounded">
+              <img
+                src="/images/gallery/gallery-leaves-2.jpg"
+                alt="Bunga cosmos kuning-oranye segar siap digunakan dalam teknik iron blanket"
+                class="w-full object-cover gallery-image transition-all duration-300 ease-in-out"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="mt-2 text-xs text-stone-500">Bahan Alami</figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Hover transition CSS for gallery images (pointer:fine only) -->
+    <!-- Req 13.4: opacity change 0.3-0.7 OR scale 1.03-1.10 on hover for desktop -->
+    <style>
+      @media (pointer: fine) {
+        .gallery-image:hover {
+          opacity: 0.75;
+          transform: scale(1.04);
+        }
+      }
+    </style>
+
+  </main>
+  <%- include('../partials/footer') %>
+</body>
+</html>
