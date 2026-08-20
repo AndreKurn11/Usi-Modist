@@ -21,115 +21,78 @@
     >
       <div class="max-w-[1600px] mx-auto">
 
-        <!-- HERO WRAPPER -->
-        <div class="relative min-h-0 lg:h-[640px]">
+        <!-- HERO WRAPPER — fixed height, tidak berubah saat zoom / reflow konten -->
+        <div class="relative h-[560px] sm:h-[620px] lg:h-[720px] overflow-hidden">
 
-          <!-- IMAGE -->
+          <!-- FULL-BLEED IMAGE -->
+          <img
+            src="/images/hero-ecoprint.jpeg"
+            alt="Kain ecoprint Usimodist dengan motif daun alami"
+            class="absolute inset-0 w-full h-full object-cover object-center"
+            loading="lazy"
+          />
+
+          <!-- GRADIENT OVERLAY — MOBILE: vertikal (atas transparan, bawah solid) -->
           <div
-            class="relative w-full h-[360px] lg:absolute lg:inset-y-0 lg:right-0 lg:w-[68%] lg:h-full"
-          >
-            <img
-              src="/images/hero-ecoprint-3.jpeg"
-              alt="Kain ecoprint Usimodist dengan motif daun alami"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-
-
-          <!-- WHITE DIAGONAL PANEL -->
-          <div
-            class="hidden lg:block absolute inset-y-0 left-0 w-[48%] bg-stone-50 z-10"
-            style="
-              clip-path: polygon(
-                0 0,
-                70% 0,
-                100% 100%,
-                0 100%
-              );
-            "
+            class="absolute inset-0 bg-gradient-to-t from-stone-50 from-20% via-stone-50/80 via-55% to-transparent to-90%
+                  lg:hidden"
           ></div>
 
+          <!-- GRADIENT OVERLAY — DESKTOP: horizontal (kiri solid, kanan transparan) -->
+          <div
+            class="hidden lg:block absolute inset-0 bg-gradient-to-r from-stone-50 from-10% via-stone-50/85 via-40% to-transparent to-70%"
+          ></div>
 
           <!-- TEXT CONTENT -->
-          <div
-            class="relative z-20 px-6 py-12 lg:absolute lg:inset-y-0 lg:left-0 lg:w-[48%] lg:flex lg:items-center lg:px-20 lg:py-0"
-          >
-            <div class="max-w-md">
+          <div class="relative z-10 h-full flex items-end lg:items-center px-5 sm:px-8 lg:px-20 pb-10 sm:pb-12 lg:pb-0">
+            <div class="max-w-lg">
+
+              <!-- Eyebrow label -->
+              <p class="text-[10px] sm:text-xs lg:text-sm font-semibold tracking-[0.2em] sm:tracking-[0.25em] text-green-800/80 uppercase mb-3 sm:mb-4">
+                Natural &nbsp;•&nbsp; Local &nbsp;•&nbsp; Sustainable
+              </p>
 
               <!-- Heading -->
               <h1
                 id="hero-heading"
-                class="font-serif text-4xl sm:text-5xl lg:text-8xl font-bold text-stone-900 leading-[1.05]"
+                class="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-green-900 leading-[1.15] lg:leading-[1.1]"
               >
-                Alam.<br />
-                Tradisi.<br />
-                Usimodist.
+                Keindahan Alami,<br />
+                Karya Nusantara
               </h1>
 
-
               <!-- Description -->
-              <p
-                class="mt-6 max-w-md text-sm sm:text-base lg:text-lg text-stone-600 leading-relaxed
-                "
-              >
-                Usimodist adalah butik ecoprint yang <br />
-                menghadirkan keindahan alam ke dalam <br />
-                setiap helai karya.
+              <p class="mt-4 sm:mt-6 max-w-md text-sm lg:text-lg text-stone-700 leading-relaxed">
+                USI Modist menghadirkan produk ecoprint berkualitas tinggi
+                yang dibuat dengan cinta untuk alam dan budaya Indonesia.
               </p>
 
+              <!-- CTAs -->
+              <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 sm:gap-6">
+                <a
+                  href="/about"
+                  class="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full w-full sm:w-auto
+                        bg-green-800 text-white text-sm font-semibold tracking-wide
+                        hover:bg-green-900 transition-colors duration-300
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2"
+                >
+                  Selengkapnya
+                </a>
 
-              <!-- CTA -->
-              <a 
-                href="/products" 
-                class="mt-6 inline-flex items-center gap-2 min-h-[44px] text-base font-semibold text-stone-800 hover:text-stone-950 
-                      hover:gap-3 transition-all duration-300 focus:outline-none focus-visible:ring-2 
-                      focus-visible:ring-stone-700 focus-visible:ring-offset-2"
-              >
-                Lihat Produk
-                <span aria-hidden="true">→</span>
-              </a>
+                <a
+                  href="/products"
+                  class="inline-flex items-center gap-2 min-h-[44px] text-sm font-semibold tracking-wide
+                        text-green-900 pb-0.5
+                        hover:gap-3 hover:border-green-900 transition-all duration-300
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 no-un"
+                >
+                  Lihat Koleksi
+                  <span aria-hidden="true">→</span>
+                </a>
+              </div>
 
             </div>
           </div>
-
-
-          <!-- DECORATIVE BADGE -->
-          <div 
-            class="hidden lg:flex absolute top-8 right-8 z-30 w-20 h-20 rounded-full border border-white/70 items-center justify-center"
-          >
-            <span
-              class="text-[9px] tracking-widest text-white uppercase
-              "
-            >
-              Eco · Print
-            </span>
-          </div>
-
-
-          <!-- PAGE INDICATOR
-          <div
-            class="
-              hidden
-              lg:flex
-              absolute
-              left-20
-              bottom-10
-              z-30
-              flex-col
-              items-center
-              gap-3
-              text-xs
-              text-stone-500
-              tracking-widest
-            "
-          >
-            <span>01</span>
-
-            <span class="w-px h-10 bg-stone-400"></span>
-
-            <span>06</span>
-          </div> -->
 
         </div>
       </div>
