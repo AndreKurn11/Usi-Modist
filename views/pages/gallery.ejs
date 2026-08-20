@@ -6,22 +6,96 @@
   <main>
 
     <!-- ── Page Header ───────────────────────────────────────────── -->
-    <section class="bg-stone-900 text-stone-100 py-12 lg:py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <span class="text-xs font-semibold uppercase tracking-widest text-stone-400">Visual</span>
-        <h1 class="font-serif text-4xl lg:text-5xl font-bold text-stone-100 mt-3 leading-tight">
+    <section
+  class="relative overflow-hidden bg-ivory text-brown"
+  aria-labelledby="gallery-hero-heading"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div
+      class="min-h-[380px] lg:min-h-[440px]
+             flex items-center justify-center"
+    >
+
+      <!-- TEXT -->
+      <div class="w-full max-w-3xl text-center">
+
+        <!-- EYEBROW -->
+        <div class="flex items-center justify-center gap-3 mb-6">
+
+          <span class="h-px w-9 bg-olive"></span>
+
+          <span
+            class="text-[11px] font-medium uppercase
+                   tracking-[0.22em] text-olive"
+          >
+            Visual
+          </span>
+
+          <span class="h-px w-9 bg-olive"></span>
+
+        </div>
+
+
+        <!-- HEADING -->
+        <h1
+          id="gallery-hero-heading"
+          class="font-serif text-5xl sm:text-6xl lg:text-[64px]
+                 font-normal leading-[0.98]
+                 tracking-tight text-brown"
+        >
           Galeri
+          <br />
+          <span class="italic text-brown-light">
+            Usimodist.
+          </span>
         </h1>
-        <p class="mt-4 text-base text-stone-300 max-w-xl leading-relaxed">
-          Sebuah pandangan ke dalam dunia ecoprint Usimodist — dari dedaunan hingga karya jadi.
+
+
+        <!-- DESCRIPTION -->
+        <p
+          class="mt-7 mx-auto max-w-2xl
+                 text-sm lg:text-base
+                 leading-7 text-taupe"
+        >
+          Melihat lebih dekat proses, tekstur, dan karya ecoprint
+          Usimodist — dari jejak dedaunan hingga menjadi karya
+          yang siap dikenakan.
         </p>
+
+
+        <!-- META -->
+        <div
+          class="mt-8 flex items-center justify-center gap-4
+                 text-[10px] uppercase
+                 tracking-[0.2em] text-taupe-light"
+        >
+          <span>Nature</span>
+
+          <span class="h-px w-8 bg-olive/50"></span>
+
+          <span>Process</span>
+
+          <span class="h-px w-8 bg-olive/50"></span>
+
+          <span>Craft</span>
+        </div>
+
       </div>
-    </section>
+
+    </div>
+  </div>
+
+
+  <!-- BORDER -->
+  <div
+    class="absolute bottom-0 left-0 right-0
+           border-t border-border/70"
+  ></div>
+
+</section>
 
     <!-- ── Gallery Grid ───────────────────────────────────────────── -->
-    <!-- Req 13.1–13.7 -->
-    <!-- min 2 columns desktop (≥768px), 1 column mobile (<768px) -->
-    <!-- CSS grid masonry-like with varied heights -->
     <section class="py-10 lg:py-16" aria-label="Galeri foto Usimodist">
       <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
 
