@@ -972,6 +972,10 @@ a {
   min-height: 380px;
 }
 
+.min-h-\[320px\] {
+  min-height: 320px;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -2380,6 +2384,10 @@ a {
 
   .lg\:min-h-\[440px\] {
     min-height: 440px;
+  }
+
+  .lg\:min-h-\[360px\] {
+    min-height: 360px;
   }
 
   .lg\:w-\[560px\] {
