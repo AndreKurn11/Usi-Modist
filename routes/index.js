@@ -3,8 +3,8 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   res.render('pages/index', {
-    title: 'Beranda | Usimodist',
-    techniques: ['Pounding', 'Steam', 'Iron Blanket'],
+    title: 'Usimodist',
+    techniques: ['Mirror', 'Blanket'],  
     transparentNav: true
   });
 });

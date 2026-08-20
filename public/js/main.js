@@ -61,7 +61,7 @@ function initProductFilter() {
 
   if (!buttons.length || !cards.length) return;
 
-  const VALID_TECHNIQUES = ['pounding', 'steam', 'iron blanket'];
+  const VALID_TECHNIQUES = ['mirror', 'blanket'];
 
   /**
    * Apply a filter: show/hide cards based on technique value.

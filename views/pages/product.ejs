@@ -26,11 +26,12 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
 
           <!-- Product Image (Req 11.4): full-width mobile / min 50% desktop -->
-          <div class="w-full">
+          <!-- Product Image -->
+          <div class="w-full aspect-[4/5] overflow-hidden rounded">
             <img
               src="<%= product.image %>"
               alt="<%= product.name %>"
-              class="w-full object-cover rounded"
+              class="w-full h-full object-cover"
               loading="eager"
             />
           </div>
