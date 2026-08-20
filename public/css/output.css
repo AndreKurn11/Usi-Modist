@@ -2174,6 +2174,11 @@ a {
   color: rgb(28 25 23 / var(--tw-text-opacity));
 }
 
+.hover\:text-brown:hover {
+  --tw-text-opacity: 1;
+  color: rgb(59 52 42 / var(--tw-text-opacity));
+}
+
 .hover\:shadow-sm:hover {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
