@@ -63,26 +63,66 @@
 
               <!-- CTAs -->
               <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-4 sm:gap-6">
+                <!-- PRIMARY CTA -->
                 <a
                   href="/about"
-                  class="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full w-full sm:w-auto
-                        bg-olive text-softwhite text-sm font-semibold tracking-wide
-                        hover:bg-brown-light transition-colors duration-300
-                        focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
+                  class="group inline-flex items-center justify-center gap-3
+                        min-h-[50px] px-7 sm:px-8
+                        w-full sm:w-auto
+                        rounded-full
+                        bg-olive text-softwhite
+                        text-sm font-semibold tracking-wide
+                        shadow-sm
+                        animate-float-cta
+                        transition-all duration-300
+                        hover:bg-brown
+                        hover:shadow-md
+                        focus:outline-none
+                        focus-visible:ring-2
+                        focus-visible:ring-olive
+                        focus-visible:ring-offset-2"
                 >
-                  Selengkapnya
+                  <span>Cerita Kami</span>
                 </a>
 
+                <!-- SECONDARY CTA -->
                 <a
                   href="/products"
-                  class="inline-flex items-center gap-2 min-h-[44px] text-sm font-semibold tracking-wide
-                        text-brown pb-0.5
-                        hover:gap-3 hover:border-brown transition-all duration-300
-                        focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 no-un"
+                  class="group inline-flex items-center gap-2
+                        min-h-[44px]
+                        text-sm font-semibold tracking-wide
+                        text-brown
+                        transition-all duration-300
+                        focus:outline-none
+                        focus-visible:ring-2
+                        focus-visible:ring-olive
+                        focus-visible:ring-offset-2
+                        no-un"
                 >
-                  Lihat Koleksi
-                  <span aria-hidden="true">→</span>
+                  <span
+                    class="relative
+                          after:absolute
+                          after:left-0
+                          after:-bottom-1
+                          after:h-px
+                          after:w-0
+                          after:bg-brown
+                          after:transition-all
+                          after:duration-300
+                          group-hover:after:w-full"
+                  >
+                    Lihat Koleksi
+                  </span>
+
+                  <span
+                    aria-hidden="true"
+                    class="transition-transform duration-300
+                          group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
                 </a>
+
               </div>
 
             </div>

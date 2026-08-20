@@ -41,6 +41,22 @@ module.exports = {
         // Border
         border: "#E7E5E2",
       },
+
+      // CTA FLOAT ANIMATION
+      keyframes: {
+        "float-cta": {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-5px)",
+          },
+        },
+      },
+
+      animation: {
+        "float-cta": "float-cta 2.5s ease-in-out infinite",
+      },
     },
   },
 
