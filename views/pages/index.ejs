@@ -135,14 +135,19 @@
               id="about-preview-heading"
               class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 leading-snug"
             >
-              Dari Alam, Untuk Kehidupan yang Lebih Baik
+              Dari Alam, <br /> 
+              Untuk Kehidupan yang <br />
+              Lebih Baik
             </h2>
             <p class="text-sm lg:text-base text-stone-600 leading-relaxed">
-              Kami menciptakan tekstil ecoprint menggunakan pewarna alami dari tumbuhan, menjaga bumi dengan setiap karya.
+              Kami percaya bahwa keindahan tidak harus datang dari <br />
+              bahan yang merusak lingkungan. Melalui teknik ecoprint, <br />
+              kami menciptakan produk yang ramah lingkungan, <br />
+              mendukung keberlanjutan, dan memberdayakan masyarakat.
             </p>
             <a
               href="/about"
-              class="inline-flex items-center text-sm font-semibold text-stone-800 hover:text-stone-600 underline underline-offset-4 transition-colors duration-150 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 rounded self-start"
+              class="inline-flex items-center text-sm font-bold text-stone-800 hover:text-stone-600 no-underline transition-colors duration-150 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 rounded self-start"
             >
               Selengkapnya Tentang Kami →
             </a>
@@ -169,151 +174,177 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <h2
-          id="technique-heading"
-          class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 mb-10 text-center"
-        >
-          Ecoprint Berdasarkan Teknik
-        </h2>
+        <!-- SECTION HEADER -->
+        <div class="flex items-end justify-between mb-6 lg:mb-7">
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- LEFT: TITLE -->
+          <div>
+            <p
+              class="text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-stone-600 mb-2"
+            >
+              Produk Kami
+            </p>
 
-          <!-- Card: Pounding -->
-          <div
-            class="group relative overflow-hidden rounded border border-stone-200"
-            data-technique="Pounding"
-            style="height: 400px;"
+            <h2
+              id="technique-heading"
+              class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal text-stone-900"
+            >
+              <span class="block">Ecoprint</span>
+              <span class="block mt-2">Berdasarkan Teknik</span>
+            </h2>
+          </div>
+
+          <!-- RIGHT: VIEW ALL -->
+          <a
+            href="/products"
+            class="hidden sm:inline-flex items-center gap-3 pb-1 text-sm font-medium text-stone-900 no-underline hover:text-stone-600 transition-colors"
           >
-            <!-- Image -->
+            <span>Lihat Semua Produk</span>
+            <span class="text-xl leading-none">→</span>
+          </a>
+
+        </div>
+
+
+        <!-- PRODUCT CARDS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-[10px]">
+
+          <!-- POUNDING -->
+          <a
+            href="/products?technique=Pounding"
+            class="group relative block overflow-hidden rounded-[2px] h-[300px] lg:h-[305px] no-underline"
+            data-technique="Pounding"
+          >
+
             <img
               src="/images/technique-pounding.jpg"
               alt="Teknik ecoprint pounding"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               loading="lazy"
             />
 
-            <!-- Overlay -->
+            <!-- DARK OVERLAY -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"
             ></div>
 
-            <!-- Content -->
-            <div
-              class="absolute p-5"
-              style="bottom: 0; left: 0; right: 0;"
-            >
+            <!-- CONTENT -->
+            <div class="absolute bottom-0 left-0 p-5 lg:p-6">
+
               <h3
-                class="font-serif text-2xl font-bold text-white"
-                style="color: white;"
+                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-white mb-3"
               >
                 Pounding
               </h3>
 
-              <a
-                href="/products?technique=Pounding"
-                class="inline-flex items-center gap-2 text-sm font-bold text-white no-underline hover:text-stone-200 transition-colors"
-                style="color: white;"
+              <div
+                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-white"
               >
-                <span>Lihat Produk</span>
-
-                <span class="text-lg">
+                <span class="font-bold">Lihat Produk</span>
+                <span class="text-lg leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
-            </div>
-          </div>
+              </div>
 
-          <!-- Card: Steam -->
-          <div
-            class="group relative overflow-hidden rounded border border-stone-200"
+            </div>
+          </a>
+
+
+          <!-- STEAM -->
+          <a
+            href="/products?technique=Steam"
+            class="group relative block overflow-hidden rounded-[2px] h-[300px] lg:h-[305px] no-underline"
             data-technique="Steam"
-            style="height: 400px;"
           >
-            <!-- Image -->
+
             <img
               src="/images/technique-steam.jpg"
               alt="Teknik ecoprint steam"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               loading="lazy"
             />
 
-            <!-- Overlay -->
+            <!-- DARK OVERLAY -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"
             ></div>
 
-            <!-- Content -->
-            <div
-              class="absolute p-5"
-              style="bottom: 0; left: 0; right: 0;"
-            >
+            <!-- CONTENT -->
+            <div class="absolute bottom-0 left-0 p-5 lg:p-6">
+
               <h3
-                class="font-serif text-2xl font-bold text-white"
-                style="color: white;"
+                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-white mb-3"
               >
                 Steam
               </h3>
 
-              <a
-                href="/products?technique=Steam"
-                class="inline-flex items-center gap-2 text-sm font-bold text-white no-underline hover:text-stone-200 transition-colors"
-                style="color: white;"
+              <div
+                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-white"
               >
                 <span>Lihat Produk</span>
-
-                <span class="text-lg">
+                <span class="text-lg leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
-            </div>
-          </div>
+              </div>
 
-          <!-- Card: Iron Blanket -->
-          <div
-            class="group relative overflow-hidden rounded border border-stone-200"
+            </div>
+          </a>
+
+
+          <!-- IRON BLANKET -->
+          <a
+            href="/products?technique=Iron%20Blanket"
+            class="group relative block overflow-hidden rounded-[2px] h-[300px] lg:h-[305px] no-underline"
             data-technique="Iron Blanket"
-            style="height: 400px;"
           >
-            <!-- Image -->
+
             <img
               src="/images/technique-iron-blanket.jpg"
               alt="Teknik ecoprint iron blanket"
-              class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               loading="lazy"
             />
 
-            <!-- Overlay -->
+            <!-- DARK OVERLAY -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"
             ></div>
 
-            <!-- Content -->
-            <div
-              class="absolute p-5"
-              style="bottom: 0; left: 0; right: 0;"
-            >
+            <!-- CONTENT -->
+            <div class="absolute bottom-0 left-0 p-5 lg:p-6">
+
               <h3
-                class="font-serif text-2xl font-bold text-white"
-                style="color: white;"
+                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-white mb-3"
               >
                 Iron Blanket
               </h3>
 
-              <a
-                href="/products?technique=Iron%20Blanket"
-                class="inline-flex items-center gap-2 text-sm font-bold text-white no-underline hover:text-stone-200 transition-colors"
-                style="color: white;"
+              <div
+                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-white"
               >
                 <span>Lihat Produk</span>
-
-                <span class="text-lg">
+                <span class="text-lg leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
-              </a>
+              </div>
+
             </div>
-          </div>
+          </a>
 
         </div>
+
+
+        <!-- MOBILE: VIEW ALL -->
+        <div class="mt-6 sm:hidden">
+          <a
+            href="/products"
+            class="inline-flex items-center gap-3 text-sm font-medium text-stone-900 no-underline"
+          >
+            <span>Lihat Semua Produk</span>
+            <span class="text-xl leading-none">→</span>
+          </a>
+        </div>
+
       </div>
     </section>
 
