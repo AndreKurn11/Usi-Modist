@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <%- include('../partials/head', { title: title }) %>
-<body class="bg-stone-50 text-stone-900 font-sans">
+<body class="bg-ivory text-brown font-sans">
   <%- include('../partials/header') %>
   <main>
 
     <!-- ══════════════════════════════════════════════════════════════
-         Section 1 — Hero
-         Requirements: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 17.7
-         - bg-stone-50 (lightness ≥90% ✓)
-         - py-10 lg:py-16 (min 40px mobile / 64px desktop ✓)
-         - H1 font-serif text-4xl lg:text-6xl
-         - Two-column grid lg:; image below text on mobile (order-last)
-         - No CSS gradient, no box-shadow blur >16px, border-radius ≤8px on img
+    Section 1 — Hero
     ══════════════════════════════════════════════════════════════ -->
     <section
-      class="relative bg-stone-50 overflow-hidden"
+      class="relative bg-ivory overflow-hidden"
       data-reveal
       aria-labelledby="hero-heading"
     >
@@ -29,18 +23,18 @@
             src="/images/hero-ecoprint.jpeg"
             alt="Kain ecoprint Usimodist dengan motif daun alami"
             class="absolute inset-0 w-full h-full object-cover object-center"
-            loading="lazy"
+            loading="eager"
+            fetchpriority="high"
           />
 
           <!-- GRADIENT OVERLAY — MOBILE: vertikal (atas transparan, bawah solid) -->
           <div
-            class="absolute inset-0 bg-gradient-to-t from-stone-50 from-20% via-stone-50/80 via-55% to-transparent to-90%
-                  lg:hidden"
+            class="absolute inset-0 bg-gradient-to-t from-ivory from-20% via-ivory/80 via-55% to-transparent to-90% lg:hidden"
           ></div>
 
           <!-- GRADIENT OVERLAY — DESKTOP: horizontal (kiri solid, kanan transparan) -->
           <div
-            class="hidden lg:block absolute inset-0 bg-gradient-to-r from-stone-50 from-10% via-stone-50/85 via-40% to-transparent to-70%"
+            class="hidden lg:block absolute inset-0 bg-gradient-to-r from-ivory from-10% via-ivory/85 via-40% to-transparent to-70%"
           ></div>
 
           <!-- TEXT CONTENT -->
@@ -48,21 +42,21 @@
             <div class="max-w-lg">
 
               <!-- Eyebrow label -->
-              <p class="text-[10px] sm:text-xs lg:text-sm font-semibold tracking-[0.2em] sm:tracking-[0.25em] text-green-800/80 uppercase mb-3 sm:mb-4">
+              <p class="text-[10px] sm:text-xs lg:text-sm font-semibold tracking-[0.2em] sm:tracking-[0.25em] text-olive/80 uppercase mb-3 sm:mb-4">
                 Natural &nbsp;•&nbsp; Local &nbsp;•&nbsp; Sustainable
               </p>
 
               <!-- Heading -->
               <h1
                 id="hero-heading"
-                class="font-serif text-3xl sm:text-4xl lg:text-6xl font-bold text-green-900 leading-[1.15] lg:leading-[1.1]"
+                class="font-serif text-3xl sm:text-4xl lg:text-6xl font-normal text-brown leading-[1.15] lg:leading-[1.1]"
               >
                 Keindahan Alami,<br />
                 Karya Nusantara
               </h1>
 
               <!-- Description -->
-              <p class="mt-4 sm:mt-6 max-w-md text-sm lg:text-lg text-stone-700 leading-relaxed">
+              <p class="mt-4 sm:mt-6 max-w-md text-sm lg:text-lg text-taupe leading-relaxed">
                 USI Modist menghadirkan produk ecoprint berkualitas tinggi
                 yang dibuat dengan cinta untuk alam dan budaya Indonesia.
               </p>
@@ -72,9 +66,9 @@
                 <a
                   href="/about"
                   class="inline-flex items-center justify-center min-h-[48px] px-8 rounded-full w-full sm:w-auto
-                        bg-green-800 text-white text-sm font-semibold tracking-wide
-                        hover:bg-green-900 transition-colors duration-300
-                        focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2"
+                        bg-olive text-softwhite text-sm font-semibold tracking-wide
+                        hover:bg-brown-light transition-colors duration-300
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
                 >
                   Selengkapnya
                 </a>
@@ -82,9 +76,9 @@
                 <a
                   href="/products"
                   class="inline-flex items-center gap-2 min-h-[44px] text-sm font-semibold tracking-wide
-                        text-green-900 pb-0.5
-                        hover:gap-3 hover:border-green-900 transition-all duration-300
-                        focus:outline-none focus-visible:ring-2 focus-visible:ring-green-700 focus-visible:ring-offset-2 no-un"
+                        text-brown pb-0.5
+                        hover:gap-3 hover:border-brown transition-all duration-300
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 no-un"
                 >
                   Lihat Koleksi
                   <span aria-hidden="true">→</span>
@@ -99,17 +93,10 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════════
-         Section 2 — About Preview
-         Requirements: 4.1, 4.2, 4.3, 4.4, 4.5, 4.6
-         - bg-stone-100
-         - Image LEFT on desktop (min-h-[400px]), image ABOVE text on mobile (min-h-[240px])
-         - Label "TENTANG KAMI" text-xs font-semibold uppercase tracking-widest
-         - Heading font-serif: "Dari Alam, Untuk Kehidupan yang Lebih Baik"
-         - Description 50–200 chars about eco-print sustainability
-         - Link "Selengkapnya Tentang Kami →" → /about (same tab)
+    Section 2 — About Preview
     ══════════════════════════════════════════════════════════════ -->
     <section
-      class="bg-stone-100 py-10 lg:py-16"
+      class="bg-cream py-10 lg:py-16"
       data-reveal
       aria-labelledby="about-preview-heading"
     >
@@ -128,26 +115,29 @@
 
           <!-- Text block — right on desktop, below image on mobile -->
           <div class="flex flex-col justify-center gap-5">
-            <span class="text-xs font-semibold uppercase tracking-widest text-stone-500">
-              Tentang Kami
-            </span>
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-px bg-olive"></span>
+              <span class="text-xs font-semibold uppercase tracking-widest text-taupe">
+                Tentang Kami
+              </span>
+            </div>
             <h2
               id="about-preview-heading"
-              class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 leading-snug"
+              class="font-serif text-3xl lg:text-4xl font-normal text-brown leading-snug"
             >
               Dari Alam, <br /> 
               Untuk Kehidupan yang <br />
               Lebih Baik
             </h2>
-            <p class="text-sm lg:text-base text-stone-600 leading-relaxed">
-              Kami percaya bahwa keindahan tidak harus datang dari <br />
-              bahan yang merusak lingkungan. Melalui teknik ecoprint, <br />
-              kami menciptakan produk yang ramah lingkungan, <br />
-              mendukung keberlanjutan, dan memberdayakan masyarakat.
+            <p class="text-sm lg:text-base text-taupe leading-relaxed">
+              Kami percaya bahwa keindahan tidak harus datang dari bahan yang
+              merusak lingkungan. Melalui teknik ecoprint, kami menciptakan
+              produk yang ramah lingkungan, mendukung keberlanjutan, dan
+              memberdayakan masyarakat.
             </p>
             <a
               href="/about"
-              class="inline-flex items-center text-sm font-bold text-stone-800 hover:text-stone-600 no-underline transition-colors duration-150 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 rounded self-start"
+              class="inline-flex items-center text-sm font-medium text-brown hover:text-olive no-underline transition-colors duration-150 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 rounded self-start"
             >
               Selengkapnya Tentang Kami →
             </a>
@@ -156,38 +146,33 @@
         </div>
       </div>
     </section>
-
+    
     <!-- ══════════════════════════════════════════════════════════════
-         Section 3 — Technique Cards
-         Requirements: 5.1, 5.2, 5.3, 5.4, 5.5, 5.6, 5.7
-         - bg-stone-50
-         - Heading font-serif: "Ecoprint Berdasarkan Teknik"
-         - grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6
-         - 3 cards with data-technique attribute
-         - Each card: image (non-empty alt per spec), technique name, "Lihat Produk →" link
-         - Links: /products?technique=Pounding, /products?technique=Steam, /products?technique=Iron Blanket
+    Section 3 — Technique Cards
     ══════════════════════════════════════════════════════════════ -->
+    <div class="border-t border-border"></div>
     <section
-      class="bg-stone-50 py-10 lg:py-16"
+      class="bg-ivory py-10 lg:py-16"
       data-reveal
       aria-labelledby="technique-heading"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- SECTION HEADER -->
-        <div class="flex items-end justify-between mb-6 lg:mb-7">
-
+        <div class="flex items-end justify-between mb-8 lg:mb-10">
+          
           <!-- LEFT: TITLE -->
           <div>
-            <p
-              class="text-[11px] sm:text-xs font-semibold tracking-[0.18em] uppercase text-stone-600 mb-2"
-            >
-              Produk Kami
-            </p>
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-px bg-olive"></span>
+              <span class="text-xs font-semibold uppercase tracking-widest text-taupe">
+                Produk Kami
+              </span>
+            </div>
 
             <h2
               id="technique-heading"
-              class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal text-stone-900"
+              class="font-serif text-3xl sm:text-4xl lg:text-[42px] font-normal text-brown leading-[1.05]"
             >
               <span class="block">Ecoprint</span>
               <span class="block mt-2">Berdasarkan Teknik</span>
@@ -197,7 +182,7 @@
           <!-- RIGHT: VIEW ALL -->
           <a
             href="/products"
-            class="hidden sm:inline-flex items-center gap-3 pb-1 text-sm font-medium text-stone-900 no-underline hover:text-stone-600 transition-colors"
+            class="hidden sm:inline-flex items-center gap-3 pb-1 text-sm font-medium text-brown no-underline hover:text-olive transition-colors"
           >
             <span>Lihat Semua Produk</span>
             <span class="text-xl leading-none">→</span>
@@ -225,22 +210,22 @@
 
             <!-- DARK OVERLAY -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-brown/70 via-brown/20 to-transparent"
             ></div>
 
             <!-- CONTENT -->
             <div class="absolute bottom-0 left-0 p-5 lg:p-6">
 
               <h3
-                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-white mb-3"
+                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-softwhite mb-3"
               >
                 Pounding
               </h3>
 
               <div
-                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-white"
+                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-softwhite"
               >
-                <span class="font-bold">Lihat Produk</span>
+                <span class="font-medium">Lihat Produk</span>
                 <span class="text-lg leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
@@ -266,22 +251,22 @@
 
             <!-- DARK OVERLAY -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-brown/70 via-brown/20 to-transparent"
             ></div>
 
             <!-- CONTENT -->
             <div class="absolute bottom-0 left-0 p-5 lg:p-6">
 
               <h3
-                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-white mb-3"
+                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-softwhite mb-3"
               >
                 Steam
               </h3>
 
               <div
-                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-white"
+                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-softwhite"
               >
-                <span>Lihat Produk</span>
+                <span class="font-medium">Lihat Produk</span>
                 <span class="text-lg leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
@@ -307,22 +292,22 @@
 
             <!-- DARK OVERLAY -->
             <div
-              class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent"
+              class="absolute inset-0 bg-gradient-to-t from-brown/70 via-brown/20 to-transparent"
             ></div>
 
             <!-- CONTENT -->
             <div class="absolute bottom-0 left-0 p-5 lg:p-6">
 
               <h3
-                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-white mb-3"
+                class="font-serif text-2xl lg:text-[28px] leading-none font-normal text-softwhite mb-3"
               >
                 Iron Blanket
               </h3>
 
               <div
-                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-white"
+                class="inline-flex items-center gap-3 text-xs lg:text-sm font-medium text-softwhite"
               >
-                <span>Lihat Produk</span>
+                <span class="font-medium">Lihat Produk</span>
                 <span class="text-lg leading-none transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
@@ -338,7 +323,7 @@
         <div class="mt-6 sm:hidden">
           <a
             href="/products"
-            class="inline-flex items-center gap-3 text-sm font-medium text-stone-900 no-underline"
+            class="inline-flex items-center gap-3 text-sm font-medium text-brown no-underline"
           >
             <span>Lihat Semua Produk</span>
             <span class="text-xl leading-none">→</span>
@@ -349,83 +334,123 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════════
-         Section 4 — Mission ("Kenapa Kami Melakukan Ini?")
-         Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.6
-         - bg-stone-900 text-stone-100 (dark section)
-         - Label "ISU YANG DIANGKAT" uppercase
-         - Heading font-serif: "Kenapa Kami Melakukan Ini?"
-         - Text explicitly mentions: limbah tekstil, pencemaran air kimia, fast fashion
-         - Link "Pelajari Lebih Lanjut →" → /about
-         - Image RIGHT on desktop + overlay with 4 labels (absolute over relative container)
-         - Mobile: text above image, single column
+    Section 4 — Mission ("Kenapa Kami Melakukan Ini?")
     ══════════════════════════════════════════════════════════════ -->
+    <div class="border-t border-border"></div>
     <section
-      class="bg-[#E8E8D5] text-stone-100 py-10 lg:py-16"
+      class="bg-cream py-16 lg:py-24"
       data-reveal
       aria-labelledby="mission-heading"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          <!-- Text block — left on desktop, top on mobile -->
-          <div class="flex flex-col gap-5">
-            <span class="text-xs font-semibold uppercase tracking-widest text-[#527A55]">
-              Isu yang Diangkat
-            </span>
+          <!-- TEXT BLOCK -->
+          <div class="flex flex-col gap-6">
+
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-px bg-olive"></span>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-olive">
+                Terinspirasi dari Alam
+              </span>
+            </div>
+
             <h2
               id="mission-heading"
-              class="font-serif text-3xl lg:text-4xl font-bold text-[#527A55] leading-snug"
+              class="font-serif text-3xl sm:text-4xl lg:text-[44px] leading-[1.1] font-normal text-brown"
             >
-              Kenapa Kami Melakukan Ini?
+              Membawa Cerita<br />
+              Hutan Harapan
             </h2>
-            <div class="flex flex-col gap-3 text-sm lg:text-base text-[#527A55] leading-relaxed">
+
+            <div class="flex flex-col gap-4 text-sm lg:text-base text-taupe leading-relaxed max-w-xl">
               <p>
-                Industri tekstil global menyumbang jutaan ton <strong class="text-[#527A55] font-semibold">limbah tekstil</strong> setiap tahun — kain tak terpakai berakhir di tempat pembuangan dan tidak terurai selama ratusan tahun.
+                Usi Modist lahir dari gagasan sederhana: menghadirkan fashion
+                yang tidak hanya indah dan unik, tetapi juga memiliki kepedulian
+                terhadap lingkungan. Terinspirasi dari kekayaan alam
+                <strong class="font-semibold text-brown">Hutan Harapan Jambi</strong>,
+                ecoprint menjadi bagian dari perjalanan kami untuk memperkenalkan
+                keindahan alam Jambi melalui karya fashion berkelanjutan.
               </p>
               <p>
-                Pewarnaan konvensional mengandalkan bahan kimia sintetis yang memicu <strong class="text-[#527A55] font-semibold">pencemaran air kimia</strong> di sungai dan ekosistem sekitar kawasan pabrik tekstil.
+                Kekayaan flora Hutan Harapan menjadi sumber inspirasi untuk
+                mengeksplorasi berbagai bentuk, warna, dan karakter daun sebagai
+                motif alami pada kain. Setiap jejak daun menghasilkan karakter
+                yang berbeda, sehingga setiap karya memiliki keunikan tersendiri.
               </p>
               <p>
-                Budaya <strong class="text-[#527A55] font-semibold">fast fashion</strong> mendorong konsumsi berlebihan dan memperburuk dampak lingkungan. Usimodist hadir sebagai alternatif — karya dibuat lambat, penuh makna, dan selaras alam.
+                Bagi Usi Modist, ecoprint bukan sekadar fashion. Setiap motif
+                membawa cerita tentang alam dan kekayaan hayati Jambi, sekaligus
+                menjadi media untuk mengajak lebih banyak orang mengenal dan
+                menghargai keberlanjutan lingkungan.
               </p>
             </div>
+
             <a
               href="/about"
-              class="inline-flex items-center text-sm font-semibold text-[#527A55] hover:text-stone-300 underline underline-offset-4 transition-colors duration-150 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-400 focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900 rounded self-start"
+              class="inline-flex items-center gap-2 text-sm font-medium text-brown hover:text-brown-light transition-colors duration-300 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded self-start w-fit pb-0.5"
             >
-              Pelajari Lebih Lanjut →
+              Kenali Kisah Kami
+              <span aria-hidden="true">→</span>
             </a>
           </div>
 
-          <!-- Image + overlay — right on desktop, below text on mobile -->
+          <!-- IMAGE: SPECIMEN CARD -->
           <div class="relative w-full">
-            <img
-              src="/images/mission-environment.jpg"
-              alt="Lingkungan alam yang perlu dijaga"
-              class="w-full h-80 lg:h-[480px] object-cover rounded"
-              loading="lazy"
-            />
-            <!-- Overlay: 4 issue labels (absolute over relative container) -->
-            <div
-              class="absolute inset-0 rounded flex items-end p-5"
-              style="background-color: rgba(28,25,23,0.55);"
-              aria-hidden="true"
-            >
-              <div class="grid grid-cols-2 gap-2 w-full">
-                <span class="inline-flex items-center justify-center px-3 py-2 text-xs font-semibold text-stone-100 rounded text-center" style="background-color: rgba(41,37,36,0.90);">
-                  Limbah Tekstil
-                </span>
-                <span class="inline-flex items-center justify-center px-3 py-2 text-xs font-semibold text-stone-100 rounded text-center" style="background-color: rgba(41,37,36,0.90);">
-                  Pencemaran Air
-                </span>
-                <span class="inline-flex items-center justify-center px-3 py-2 text-xs font-semibold text-stone-100 rounded text-center" style="background-color: rgba(41,37,36,0.90);">
-                  Fast Fashion
-                </span>
-                <span class="inline-flex items-center justify-center px-3 py-2 text-xs font-semibold text-stone-100 rounded text-center" style="background-color: rgba(68,64,60,0.90);">
-                  Solusi Kami
-                </span>
+
+            <!-- corner brackets -->
+            <span class="hidden sm:block absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-brown z-10" aria-hidden="true"></span>
+            <span class="hidden sm:block absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-brown z-10" aria-hidden="true"></span>
+            <span class="hidden sm:block absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-brown z-10" aria-hidden="true"></span>
+            <span class="hidden sm:block absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-brown z-10" aria-hidden="true"></span>
+
+            <div id="mission-slideshow" class="relative w-full h-80 lg:h-[480px] overflow-hidden bg-cream">
+              <img
+                src="/images/mission-environment-1.jpg"
+                alt="Hutan Harapan Jambi"
+                data-slide
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+                loading="lazy"
+              />
+              <img
+                src="/images/mission-environment-2.jpg"
+                alt="Kekayaan flora Hutan Harapan"
+                data-slide
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                loading="lazy"
+              />
+              <img
+                src="/images/mission-environment-3.jpg"
+                alt="Karya fashion berkelanjutan Usi Modist"
+                data-slide
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                loading="lazy"
+              />
+              <img
+                src="/images/mission-environment-4.jpg"
+                alt="Motif ecoprint dari daun Hutan Harapan"
+                data-slide
+                class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- caption strip, synced with active slide -->
+            <div class="flex items-center justify-between mt-4 px-1">
+              <p class="text-xs font-semibold uppercase tracking-widest text-brown">
+                <span id="mission-slide-index">01</span>
+                <span class="text-brown/50 mx-1">—</span>
+                <span id="mission-slide-label">Hutan Harapan</span>
+              </p>
+
+              <div id="mission-slide-dots" class="flex items-center gap-2" role="tablist" aria-label="Pilih gambar">
+                <button type="button" data-dot="0" class="w-2 h-2 rounded-full bg-brown transition-all duration-300" aria-label="Gambar 1" aria-selected="true"></button>
+                <button type="button" data-dot="1" class="w-2 h-2 rounded-full bg-brown/30 transition-all duration-300" aria-label="Gambar 2" aria-selected="false"></button>
+                <button type="button" data-dot="2" class="w-2 h-2 rounded-full bg-brown/30 transition-all duration-300" aria-label="Gambar 3" aria-selected="false"></button>
+                <button type="button" data-dot="3" class="w-2 h-2 rounded-full bg-brown/30 transition-all duration-300" aria-label="Gambar 4" aria-selected="false"></button>
               </div>
             </div>
+
           </div>
 
         </div>
@@ -433,121 +458,161 @@
     </section>
 
     <!-- ══════════════════════════════════════════════════════════════
-         Section 5 — Contact Section
-         Requirements: 7.1, 7.2, 7.3, 7.4, 7.5, 7.6
-         - bg-stone-50 (light background)
-         - Heading font-serif: "Lokasi & Kontak"
-         - Alamat fisik as visible text
-         - WhatsApp wa.me link, target _blank, rel noopener noreferrer
-         - Email as visible text
-         - Instagram link, target _blank, rel noopener noreferrer
-         - Button "Hubungi Kami" → /contact
+    Section 5 — Contact Section
     ══════════════════════════════════════════════════════════════ -->
     <section
-      class="bg-stone-50 py-10 lg:py-16"
+      class="bg-ivory pb-16 lg:pb-24"
       data-reveal
       aria-labelledby="contact-section-heading"
     >
-      <!-- 1px separator top, opacity 0.1–0.25 per Req 17.8 -->
-      <div class="border-t border-stone-300" style="border-color: rgba(120,113,108,0.20);"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 lg:pt-16">
-          
-          <h2
-            id="contact-section-heading"
-            class="font-serif text-3xl lg:text-4xl font-bold text-stone-900 leading-snug mb-5"
-          >
-            Lokasi &amp; Kontak
-          </h2>
+      <div class="border-t border-border"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 lg:pt-16">
 
-          <p class="text-sm lg:text-base text-stone-600 leading-relaxed max-w-prose mb-8 lg:mb-12">
-            Kami senang mendengar dari Anda. Kunjungi kami langsung atau hubungi melalui saluran di bawah ini.
-          </p>
+        <div class="flex items-center gap-3 mb-5">
+          <span class="w-8 h-px bg-olive"></span>
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-olive">
+            Kunjungi Kami
+          </span>
+        </div>
 
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <h2
+          id="contact-section-heading"
+          class="font-serif text-3xl lg:text-4xl font-normal text-brown leading-snug mb-4"
+        >
+          Lokasi &amp; Kontak
+        </h2>
 
-            <!-- Heading + CTA (left) -->
-            <div class="flex flex-col gap-5">
+        <p class="text-sm lg:text-base text-taupe leading-relaxed max-w-prose mb-10 lg:mb-14">
+          Kami senang mendengar dari Anda. Kunjungi kami langsung atau hubungi melalui saluran di bawah ini.
+        </p>
 
-              <!-- Google Maps -->
-              <div class="w-full overflow-hidden rounded-lg border border-stone-200">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2177684826497!2d103.58245067473854!3d-1.6229698983619292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e25887c6e71f1a3%3A0x76fe0638ea6ba27b!2sDi%20Lkp%20Usi%20Modist!5e0!3m2!1sid!2sid!4v1787116618144!5m2!1sid!2sid" 
-                        width="600" 
-                        height="300" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="strict-origin-when-cross-origin">
-                </iframe>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+          <!-- MAP + CTA (left) -->
+          <div class="flex flex-col gap-6">
+
+            <div class="relative">
+              <!-- corner brackets — consistent signature with Mission section -->
+              <span class="hidden sm:block absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-brown z-10" aria-hidden="true"></span>
+              <span class="hidden sm:block absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-brown z-10" aria-hidden="true"></span>
+              <span class="hidden sm:block absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-brown z-10" aria-hidden="true"></span>
+              <span class="hidden sm:block absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-brown z-10" aria-hidden="true"></span>
+
+              <div class="w-full h-72 lg:h-96 overflow-hidden">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.2177684826497!2d103.58245067473854!3d-1.6229698983619292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e25887c6e71f1a3%3A0x76fe0638ea6ba27b!2sDi%20Lkp%20Usi%20Modist!5e0!3m2!1sid!2sid!4v1787116618144!5m2!1sid!2sid"
+                  width="100%"
+                  height="100%"
+                  style="border:0; filter: grayscale(15%) contrast(1.02);"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                ></iframe>
               </div>
-
-              <a
-                href="/contact"
-                class="inline-flex items-center justify-center px-6 py-3 min-h-[44px] min-w-[44px] text-sm font-semibold text-stone-50 bg-stone-800 hover:bg-stone-900 rounded transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 self-start"
-              >
-                Hubungi Kami
-              </a>
             </div>
 
-            <!-- Contact details (right) -->
-            <ul class="flex flex-col gap-5">
+            <address class="not-italic flex items-start gap-3 text-sm text-taupe leading-relaxed max-w-md">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-olive mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+              Jl. TP. Sriwijaya, Beliung, Kec. Kota Baru, Kota Jambi, Jambi 36361
+            </address>
 
-              <!-- Address -->
-              <li class="flex items-start gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-stone-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                  <circle cx="12" cy="9" r="2.5"/>
-                </svg>
-                <address class="not-italic text-sm text-stone-700 leading-relaxed">
-                  Jl. TP. Sriwijaya, Beliung, Kec. Kota Baru, Kota Jambi, Jambi 36361
-                </address>
-              </li>
-
-              <!-- WhatsApp -->
-              <li class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-stone-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-                </svg>
-                <a
-                  href="https://wa.me/628117443020"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm text-stone-700 hover:text-stone-900 underline underline-offset-4 transition-colors duration-150 min-h-[44px] inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 rounded"
-                  aria-label="Hubungi via WhatsApp (membuka tab baru)"
-                >
-                  +62 811-7443-020
-                </a>
-              </li>
-
-              <!-- Email -->
-              <li class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-stone-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-                <span class="text-sm text-stone-700">usimodist@gmail.com</span>
-              </li>
-
-              <!-- Instagram -->
-              <li class="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-stone-500 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <circle cx="12" cy="12" r="4"/>
-                  <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-                </svg>
-                <a
-                  href="https://www.instagram.com/usi_modist/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="text-sm text-stone-700 hover:text-stone-900 underline underline-offset-4 transition-colors duration-150 min-h-[44px] inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-stone-700 focus-visible:ring-offset-2 rounded"
-                  aria-label="Instagram Usimodist (membuka tab baru)"
-                >
-                  @usi_modist
-                </a>
-              </li>
-
-            </ul>
+            <a
+              href="/contact"
+              class="inline-flex items-center justify-center gap-2 px-7 py-3.5 min-h-[48px] text-sm font-semibold text-softwhite bg-brown hover:bg-brown-light rounded-full transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2 self-start"
+            >
+              Hubungi Kami
+              <span aria-hidden="true">→</span>
+            </a>
           </div>
+
+          <!-- CONTACT CARDS (right) -->
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
+
+            <!-- WhatsApp -->
+            <li>
+              <a
+                href="https://wa.me/628117443020"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 p-4 lg:p-5 rounded-xl border border-border bg-softwhite hover:border-olive hover:shadow-sm transition-all duration-200 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
+                aria-label="Hubungi via WhatsApp (membuka tab baru)"
+              >
+                <span class="flex-shrink-0 w-11 h-11 rounded-full bg-olive/10 flex items-center justify-center group-hover:bg-olive/20 transition-colors duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                  </svg>
+                </span>
+                <span class="flex flex-col">
+                  <span class="text-xs font-semibold uppercase tracking-wide text-taupe-light">WhatsApp</span>
+                  <span class="text-sm font-medium text-brown  transition-colors duration-200">+62 811-7443-020</span>
+                </span>
+              </a>
+            </li>
+
+            <!-- Email -->
+            <li>
+              <a
+                href="mailto:usimodist@gmail.com"
+                class="group flex items-center gap-4 p-4 lg:p-5 rounded-xl border border-border bg-softwhite hover:border-olive hover:shadow-sm transition-all duration-200 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
+              >
+                <span class="flex-shrink-0 w-11 h-11 rounded-full bg-olive/10 flex items-center justify-center group-hover:bg-olive/20 transition-colors duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                </span>
+                <span class="flex flex-col">
+                  <span class="text-xs font-semibold uppercase tracking-wide text-taupe-light">Email</span>
+                  <span class="text-sm font-medium text-brown  transition-colors duration-200">usimodist@gmail.com</span>
+                </span>
+              </a>
+            </li>
+
+            <!-- Instagram -->
+            <li>
+              <a
+                href="https://www.instagram.com/usi_modist/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-4 p-4 lg:p-5 rounded-xl border border-border bg-softwhite hover:border-olive hover:shadow-sm transition-all duration-200 min-h-[44px] focus:outline-none focus-visible:ring-2 focus-visible:ring-olive focus-visible:ring-offset-2"
+                aria-label="Instagram Usimodist (membuka tab baru)"
+              >
+                <span class="flex-shrink-0 w-11 h-11 rounded-full bg-olive/10 flex items-center justify-center group-hover:bg-olive/20 transition-colors duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+                  </svg>
+                </span>
+                <span class="flex flex-col">
+                  <span class="text-xs font-semibold uppercase tracking-wide text-taupe-light">Instagram</span>
+                  <span class="text-sm font-medium text-brown  transition-colors duration-200">@usi_modist</span>
+                </span>
+              </a>
+            </li>
+
+            <!-- Operating hours (new, fills the grid + gives the list a natural 4th item) -->
+            <li>
+              <div class="flex items-center gap-4 p-4 lg:p-5 rounded-xl border border-border bg-softwhite">
+                <span class="flex-shrink-0 w-11 h-11 rounded-full bg-olive/10 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-brown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <circle cx="12" cy="12" r="9"/>
+                    <polyline points="12 7 12 12 15 14"/>
+                  </svg>
+                </span>
+                <span class="flex flex-col">
+                  <span class="text-xs font-semibold uppercase tracking-wide text-taupe-light">Jam Buka</span>
+                  <span class="text-sm font-medium text-brown">Senin – Sabtu, 09.00 – 17.00</span>
+                </span>
+              </div>
+            </li>
+
+          </ul>
         </div>
+      </div>
     </section>
 
   </main>

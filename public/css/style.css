@@ -5,18 +5,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
 /* ── Reveal Animation ────────────────────────────────────────────
-   Requirements 15.4, 15.5
-   - opacity 0→1 + translateY 20px→0 on scroll into view
+   - opacity 0 → 1
+   - translateY 20px → 0
    - Duration 600ms
-   - Elements MUST be visible without JS (graceful degradation)
-   - Initial hidden state (.reveal-hidden) is applied via JS only
+   - Elements remain visible without JavaScript
 ─────────────────────────────────────────────────────────────── */
+
 @layer utilities {
   .reveal-hidden {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 600ms ease-out, transform 600ms ease-out;
+    transition:
+      opacity 600ms ease-out,
+      transform 600ms ease-out;
   }
 
   .reveal-hidden.is-visible {
@@ -25,25 +28,24 @@
   }
 }
 
-/* ── Typography base ─────────────────────────────────────────────
-   Requirements 17.4, 17.5, 16.6
-   - Serif for H1/H2/H3 (font-display: swap handled by Google Fonts)
-   - Sans-serif for body/nav/buttons
-   - Body min 14px mobile / 16px desktop
-   - H1 min 28px mobile / 40px desktop
-─────────────────────────────────────────────────────────────── */
+
+/* ── Typography & Global Base ─────────────────────────────────── */
+
 @layer base {
+
   html {
-    font-size: 16px; /* base rem unit */
+    font-size: 16px;
     scroll-behavior: smooth;
   }
 
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     font-size: 0.875rem; /* 14px mobile */
     line-height: 1.6;
-    color: hsl(24, 10%, 6%); /* stone-900 equivalent, lightness ~6% ≤15% ✓ */
-    background-color: hsl(60, 9%, 98%); /* stone-50, lightness ~98% ≥95% ✓ */
+
+    /* Usimodist */
+    color: #3B342A;
+    background-color: #FAF9F7;
   }
 
   @media (min-width: 1024px) {
@@ -52,20 +54,30 @@
     }
   }
 
+
+  /* ── Headings ─────────────────────────────────────────────── */
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    color: #3B342A;
+  }
+
   h1 {
-    font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.75rem; /* 28px mobile */
-    font-weight: 700;
+    font-weight: 400;
+    line-height: 1.1;
   }
 
   h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 700;
+    font-weight: 400;
+    line-height: 1.15;
   }
 
   h3 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-weight: 600;
+    font-weight: 400;
+    line-height: 1.2;
   }
 
   @media (min-width: 1024px) {
@@ -74,9 +86,25 @@
     }
   }
 
-  /* Focus styles — visible focus indicator (Req 18.3 / WCAG 2.1 SC 2.4.7) */
+
+  /* ── Paragraph ────────────────────────────────────────────── */
+
+  p {
+    color: #7A7568;
+  }
+
+
+  /* ── Links ────────────────────────────────────────────────── */
+
+  a {
+    text-decoration: none;
+  }
+
+
+  /* ── Focus Accessibility ──────────────────────────────────── */
+
   :focus-visible {
-    outline: 2px solid hsl(24, 10%, 6%);
+    outline: 2px solid #716645;
     outline-offset: 2px;
   }
 }

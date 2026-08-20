@@ -212,3 +212,61 @@ if (typeof module !== 'undefined' && module.exports) {
     initRevealAnimation,
   };
 }
+
+(function () {
+    const wrapper = document.getElementById('mission-slideshow');
+    if (!wrapper) return;
+
+    const slides = Array.from(wrapper.querySelectorAll('[data-slide]'));
+    const labels = ['Hutan Harapan', 'Kekayaan Flora', 'Sustainable Fashion', 'Ecoprint'];
+    const indexEl = document.getElementById('mission-slide-index');
+    const labelEl = document.getElementById('mission-slide-label');
+    const dots = Array.from(document.querySelectorAll('#mission-slide-dots [data-dot]'));
+
+    let current = 0;
+    let timer = null;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('opacity-100', i === index);
+        slide.classList.toggle('opacity-0', i !== index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-[#3F6343]', i === index);
+        dot.classList.toggle('bg-[#3F6343]/30', i !== index);
+        dot.setAttribute('aria-selected', String(i === index));
+      });
+      indexEl.textContent = String(index + 1).padStart(2, '0');
+      labelEl.textContent = labels[index] || '';
+      current = index;
+    }
+
+    function next() {
+      showSlide((current + 1) % slides.length);
+    }
+
+    function startAutoplay() {
+      if (prefersReducedMotion) return; // respect reduced motion — no auto-cycle
+      stopAutoplay();
+      timer = setInterval(next, 2500);
+    }
+
+    function stopAutoplay() {
+      if (timer) clearInterval(timer);
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        showSlide(Number(dot.dataset.dot));
+        startAutoplay(); // reset timer after manual interaction
+      });
+    });
+
+    wrapper.addEventListener('mouseenter', stopAutoplay);
+    wrapper.addEventListener('mouseleave', startAutoplay);
+
+    showSlide(0);
+    startAutoplay();
+  })();
