@@ -26,6 +26,7 @@ module.exports = {
         brown: {
           DEFAULT: "#3B342A",
           light: "#8E7455",
+          dark: '#2B2721',
         },
 
         // Natural Accent
