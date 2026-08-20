@@ -688,6 +688,14 @@ a {
   top: 0px;
 }
 
+.left-5 {
+  left: 1.25rem;
+}
+
+.top-5 {
+  top: 1.25rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -804,6 +812,10 @@ a {
   margin-top: 2rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .block {
   display: block;
 }
@@ -830,6 +842,10 @@ a {
 
 .aspect-\[4\/5\] {
   aspect-ratio: 4/5;
+}
+
+.aspect-\[4\/3\] {
+  aspect-ratio: 4/3;
 }
 
 .h-10 {
@@ -1331,6 +1347,16 @@ a {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-stone-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 229 228 / var(--tw-bg-opacity));
+}
+
+.bg-stone-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(168 162 158 / var(--tw-bg-opacity));
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1534,6 +1560,14 @@ a {
   padding-top: 1rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1692,6 +1726,10 @@ a {
   letter-spacing: 0.1em;
 }
 
+.tracking-\[0\.16em\] {
+  letter-spacing: 0.16em;
+}
+
 .text-brown {
   --tw-text-opacity: 1;
   color: rgb(59 52 42 / var(--tw-text-opacity));
@@ -1778,6 +1816,10 @@ a {
 .text-taupe-light {
   --tw-text-opacity: 1;
   color: rgb(187 175 161 / var(--tw-text-opacity));
+}
+
+.text-white\/70 {
+  color: rgb(255 255 255 / 0.7);
 }
 
 .underline {
@@ -1913,6 +1955,10 @@ a {
   gap: 0.75rem;
 }
 
+.hover\:gap-4:hover {
+  gap: 1rem;
+}
+
 .hover\:border-brown:hover {
   --tw-border-opacity: 1;
   border-color: rgb(59 52 42 / var(--tw-border-opacity));
@@ -2033,6 +2079,10 @@ a {
   --tw-ring-offset-width: 2px;
 }
 
+.focus-visible\:ring-offset-4:focus-visible {
+  --tw-ring-offset-width: 4px;
+}
+
 .focus-visible\:ring-offset-cream:focus-visible {
   --tw-ring-offset-color: #F5F3F0;
 }
@@ -2049,6 +2099,12 @@ a {
 .group:hover .group-hover\:scale-105 {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:scale-\[1\.04\] {
+  --tw-scale-x: 1.04;
+  --tw-scale-y: 1.04;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2223,6 +2279,10 @@ a {
     margin-bottom: 3.5rem;
   }
 
+  .lg\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
   .lg\:block {
     display: block;
   }
@@ -2337,6 +2397,10 @@ a {
 
   .lg\:gap-\[10px\] {
     gap: 10px;
+  }
+
+  .lg\:gap-10 {
+    gap: 2.5rem;
   }
 
   .lg\:p-5 {
